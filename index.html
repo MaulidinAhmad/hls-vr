@@ -37,7 +37,14 @@
     <script src="https://cdn.jsdelivr.net/npm/videojs-http-source-selector@1.1.6/dist/videojs-http-source-selector.min.js"></script>
     <script>
       (function (window, videojs) {
-        var player = (window.player = videojs("videojs-vr-player"));
+        var player = (window.player = videojs("videojs-vr-player", {
+          controlBar: {
+            skipButtons: {
+              forward: 10,
+              backward: 10,
+            },
+          },
+        }));
         player.mediainfo = player.mediainfo || {};
         player.mediainfo.projection = "360";
         player.httpSourceSelector();
