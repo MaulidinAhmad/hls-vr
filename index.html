@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet" />
     <link
-      href="https://cdn.jsdelivr.net/npm/videojs-vr@1.0.0/dist/videojs-vr.min.css"
+      href="https://cdn.jsdelivr.net/npm/videojs-vr@1.8.0/dist/videojs-vr.min.css"
       rel="stylesheet"
     />
     <link
@@ -32,14 +32,12 @@
       />
     </video>
     <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/videojs-vr@1.0.0/dist/videojs-vr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-vr@1.8.0/dist/videojs-vr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-quality-levels@2.0.4/dist/videojs-contrib-quality-levels.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-http-source-selector@1.1.6/dist/videojs-http-source-selector.min.js"></script>
     <script>
       (function (window, videojs) {
-        var player = (window.player = videojs("videojs-vr-player", {
-          fluid: true,
-        }));
+        var player = (window.player = videojs("videojs-vr-player"));
         player.mediainfo = player.mediainfo || {};
         player.mediainfo.projection = "360";
         player.httpSourceSelector();
